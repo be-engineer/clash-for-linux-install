@@ -1,7 +1,8 @@
 #!/bin/bash
 # define
 CONFIG_PATH='./resource/config.yaml'
-CLASH_PATH='./resource/clash-linux-amd64-v3-2023.08.17.gz'
+#CLASH_PATH='./resource/clash-linux-amd64-v3-2023.08.17.gz'
+CLASH_PATH='./resource/clash-linux-amd64-v1.18.0.gz'
 UI_PATH='./resource/yacd.tar.xz'
 function quit() {
     echo $0 | grep -qs install.sh && exit 1
@@ -45,7 +46,7 @@ tar -xf $UI_PATH -C /etc/clash/
 /bin/cp -f ./resource/Country.mmdb /etc/clash/
 /bin/cp -f ./sh/clashctl.sh /etc/clash/
 
-echo 'source /etc/clash/clashctl.sh' >>/etc/bashrc
+echo 'source /etc/clash/clashctl.sh' >>~/.bashrc
 source /etc/clash/clashctl.sh
 # 定时任务：更新配置
 echo '0 0 */2 * * . /etc/bashrc;clashupdate url' >>/var/spool/cron/root

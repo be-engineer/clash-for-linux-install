@@ -27,9 +27,11 @@
 ### 一键安装脚本
 
 ```bash
-git clone https://github.com/nelvko/clash-for-linux-install.git && cd clash-for-linux-install && . install.sh
+git clone https://github.com/be-engineer/clash-for-linux-install && cd clash-for-linux-install && . install.sh
 ```
 普通用户请使用`sudo ./install.sh`
+
+最新的clash核心[下载地址] (https://www.clash.la/archives/755/)
 
 > [代理加速下载](https://mirror.ghproxy.com)
 
